@@ -7,17 +7,19 @@
   </head>
   <body class="page">
     <header class="header">
-      <button class="header__btn header__btn_no-border">
+      <button class="header__btn header__btn_no-border header__btn_main">
         <h1 class="header__text">ПОПУЛЯРНЫЕ ТОВАРЫ</h1>
       </button>
-      <button class="header__btn">Недавно купили</button>
-      <button class="header__btn">Вас может заинтересовать</button>
+      <button class="header__btn header__btn_recent">Недавно купили</button>
+      <button class="header__btn header__btn_int">Вас может заинтересовать</button>
     </header>
     <main>
       <section class="main">
         <button class="cards__slider-btn"></button>
         <button class="cards__slider-btn cards__slider-btn_right"></button>
         <ul class="cards"></ul>
+        <ul class='cards cards__recent cards_display_none '></ul>
+        <ul class='cards cards__interesting cards_display_none'></ul>
       </section>
     </main>
 
@@ -25,7 +27,7 @@
       <li class="card">
         <button class="card__btn card__btn_type_like"></button>
         <button class="card__btn card__btn_type_compare"></button>
-        <img class="card__image" src="./images/pic1.png"/>
+        <img class="card__image" src="./images/pic2.png"/>
         <div class="card__caption">
           <p class="card__title"></p>
           <p class="card__price"></p>

@@ -36,3 +36,28 @@ export const initialCards = [
     counter: 0,
   },
 ];
+
+export const recentCard = [
+  {
+    title: 'Тарелка керамическая ручной работы ⌀ 12',
+    price: '600 ₽',
+    image: '',
+    counter: 0,
+  },
+]
+
+export const interestingCard = [
+  {
+    title: 'Тарелка керамическая ручной работы ⌀ 12',
+    price: '600 ₽',
+    image: '',
+    counter: 0,
+  },
+  {
+    title: 'Тарелка керамическая ручной работы ⌀ 12',
+    price: '600 ₽',
+    image: '',
+    counter: 0,
+  },
+]
+
