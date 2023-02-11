@@ -1,0 +1,12 @@
+@import '../../utils/variables.scss';
+
+.page {
+  background-color: $main-color;
+  width: 100%;
+  max-width: 1406px;
+  height: 100vh;
+  font-family: "Rubik", Arial, sans-serif;
+  font-size: $main-font-size;
+  line-height: $main-font-line-h;
+  margin: 0 auto;
+}

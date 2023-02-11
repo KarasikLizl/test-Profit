@@ -1,0 +1,172 @@
+$c-width: 334px;
+$c-height: 334px;
+$block-height: 496px;
+$round-btn-size: 34px;
+$border: #ecf0f4;
+%border {
+  border: 1px solid $border;
+  border-radius: 5px;
+}
+
+%reset-default-btn-style {
+  padding: 0;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+.cards__slider-btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 228px;
+  left: -86px;
+  @extend %border;
+  background-color: #fff;
+  background-image: url('../../images/vector-left.png');
+  background-position: center;
+  background-repeat: no-repeat;  
+}
+
+.cards__slider-btn_right {
+  background-image: url('../../images/vector-right.png');
+  left: calc(100% + 46px);
+}
+
+.card {
+  @extend %border;
+  display: flex;
+  flex-direction: column;
+  height: $block-height;
+  width: $c-width;
+  margin-right: 20px;
+  position: relative;
+
+  &__image {
+    width: $c-width;
+    height: $c-height;
+    background-image: url('../../images/bg-default.png');
+  }
+
+  &__btn {
+    @extend %reset-default-btn-style;
+    position: absolute;
+    left: 280px;
+    background-color: #fff;
+    width: $round-btn-size;
+    height: $round-btn-size;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__btn_type_like {
+    background-image: url('../../images/like.png');
+    top: 20px;
+  }
+
+  &__btn_type_compare {
+    background-image: url('../../images/compare.png');
+    top: 59px;
+  }
+
+  &__caption {
+    max-width: 282px;
+    text-align: center;
+    margin: 0 auto 10px auto;
+  }
+
+  &__title {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 400;
+    margin: 10px auto 5px auto;
+    max-height: 40px;
+  }
+
+  &__price {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__main-btns {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__count-container {
+    @extend %border;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__count-btn {
+    @extend %reset-default-btn-style;
+    width: 30px;
+    height: 30px;
+    background-image: url('../../images/min.png');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__count-btn_plus {
+    background-image: url('../../images/plus.png');
+  }
+
+  &__count-btn__num {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+  }
+
+  &__basket {
+    @extend %reset-default-btn-style;
+    width: 174px;
+    height: 50px;
+    background-color: #f1d264;
+    margin-left: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__basket-img {
+    background-image: url('../../images/basket.png');
+    width: 20px;
+    height: 20px;
+  }
+
+  &__basket-name {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    margin-left: 12px;
+  }
+}
+
+.card:last-child {
+  margin-right: 0;
+}
