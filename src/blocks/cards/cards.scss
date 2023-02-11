@@ -19,7 +19,8 @@ $border: #ecf0f4;
 .cards {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: hidden ;
   padding-top: 40px;
   padding-left: 0;
   margin: 0;
@@ -31,7 +32,7 @@ $border: #ecf0f4;
   position: absolute;
   width: 40px;
   height: 40px;
-  top: 228px;
+  top: 268px;
   left: -86px;
   @extend %border;
   background-color: #fff;
@@ -46,7 +47,8 @@ $border: #ecf0f4;
 }
 
 .card {
-  @extend %border;
+  @extend %border;  
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   height: $block-height;
@@ -77,9 +79,17 @@ $border: #ecf0f4;
     top: 20px;
   }
 
+  &__btn_type_like-active {
+    background-color: rgba($color: #000000, $alpha: .6);
+  }
+
   &__btn_type_compare {
     background-image: url('../../images/compare.png');
     top: 59px;
+  }
+
+  &__btn_type_compare-active {
+    background-color: rgba($color: #000000, $alpha: .6);
   }
 
   &__caption {
@@ -95,7 +105,7 @@ $border: #ecf0f4;
     overflow: hidden;
     font-weight: 400;
     margin: 10px auto 5px auto;
-    max-height: 40px;
+    min-height: 40px;
   }
 
   &__price {

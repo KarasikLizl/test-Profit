@@ -14,108 +14,35 @@
       <button class="header__btn">Вас может заинтересовать</button>
     </header>
     <main>
-      <section class="main">        
-        <ul class="cards">
-          <button class='cards__slider-btn'></button>
-          <button class='cards__slider-btn cards__slider-btn_right'></button>
-          <li class="card">
-            <button class="card__btn card__btn_type_like"></button>
-            <button class="card__btn card__btn_type_compare"></button>
-            <img class="card__image" />
-            <div class="card__caption">
-              <p class="card__title">
-                Тарелка керамическая ручной работы Тарелка керамическая ручной
-                работы Тарелка керамическаasdasdasdя ручной работы
-              </p>
-              <p class="card__price">600 ₽</p>
-            </div>
-            <div class="card__main-btns">
-              <div class="card__count-container">
-                <button class="card__count-btn"></button>
-                <span class="card__count-btn__num">1</span>
-                <button class="card__count-btn card__count-btn_plus"></button>
-              </div>
-              <button class="card__basket">
-                <div class="card__basket-img"></div>
-                <span class="card__basket-name">В корзину</span>
-              </button>
-            </div>
-          </li>
-
-          <li class="card">
-            <button class="card__btn card__btn_type_like"></button>
-            <button class="card__btn card__btn_type_compare"></button>
-            <img class="card__image" src='./images/pic1.png'/>
-            <div class="card__caption">
-              <p class="card__title">
-                Тарелка керамическая ручной работы Тарелка керамическая ручной
-                работы Тарелка керамическаasdasdasdя ручной работы
-              </p>
-              <p class="card__price">600 ₽</p>
-            </div>
-            <div class="card__main-btns">
-              <div class="card__count-container">
-                <button class="card__count-btn"></button>
-                <span class="card__count-btn__num">1</span>
-                <button class="card__count-btn card__count-btn_plus"></button>
-              </div>
-              <button class="card__basket">
-                <div class="card__basket-img"></div>
-                <span class="card__basket-name">В корзину</span>
-              </button>
-            </div>            
-          </li>
-
-          <li class="card">
-            <button class="card__btn card__btn_type_like"></button>
-            <button class="card__btn card__btn_type_compare"></button>
-            <img class="card__image" src='./images/pic1.png'/>
-            <div class="card__caption">
-              <p class="card__title">
-                Тарелка керамическая ручной работы Тарелка керамическая ручной
-                работы Тарелка керамическаasdasdasdя ручной работы
-              </p>
-              <p class="card__price">600 ₽</p>
-            </div>
-            <div class="card__main-btns">
-              <div class="card__count-container">
-                <button class="card__count-btn"></button>
-                <span class="card__count-btn__num">1</span>
-                <button class="card__count-btn card__count-btn_plus"></button>
-              </div>
-              <button class="card__basket">
-                <div class="card__basket-img"></div>
-                <span class="card__basket-name">В корзину</span>
-              </button>
-            </div>            
-          </li>
-
-          <li class="card">
-            <button class="card__btn card__btn_type_like"></button>
-            <button class="card__btn card__btn_type_compare"></button>
-            <img class="card__image" src='./images/pic1.png'/>
-            <div class="card__caption">
-              <p class="card__title">
-                Тарелка керамическая ручной работы Тарелка керамическая ручной
-                работы Тарелка керамическаasdasdasdя ручной работы
-              </p>
-              <p class="card__price">600 ₽</p>
-            </div>
-            <div class="card__main-btns">
-              <div class="card__count-container">
-                <button class="card__count-btn"></button>
-                <span class="card__count-btn__num">1</span>
-                <button class="card__count-btn card__count-btn_plus"></button>
-              </div>
-              <button class="card__basket">
-                <div class="card__basket-img"></div>
-                <span class="card__basket-name">В корзину</span>
-              </button>
-            </div>            
-          </li>
-
-        </ul>
+      <section class="main">
+        <button class="cards__slider-btn"></button>
+        <button class="cards__slider-btn cards__slider-btn_right"></button>
+        <ul class="cards"></ul>
       </section>
     </main>
+
+    <template id="card-template">
+      <li class="card">
+        <button class="card__btn card__btn_type_like"></button>
+        <button class="card__btn card__btn_type_compare"></button>
+        <img class="card__image" src="./images/pic1.png" />
+        <div class="card__caption">
+          <p class="card__title"></p>
+          <p class="card__price"></p>
+        </div>
+        <div class="card__main-btns">
+          <div class="card__count-container">
+            <button class="card__count-btn"></button>
+            <span class="card__count-btn__num">0</span>
+            <button class="card__count-btn card__count-btn_plus"></button>
+          </div>
+          <button class="card__basket">
+            <div class="card__basket-img"></div>
+            <span class="card__basket-name">В корзину</span>
+          </button>
+        </div>
+      </li>
+    </template>
+
   </body>
 </html>
