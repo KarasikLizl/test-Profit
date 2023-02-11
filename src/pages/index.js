@@ -7,14 +7,15 @@ import {
   interestingCard,
 } from '../components/initialCards';
 
-const page = document.querySelector('.page');
-const initialContainer = page.querySelector('.cards');
-const initialContainerRecent = page.querySelector('.cards__recent');
-const initialContainerInt = page.querySelector('.cards__interesting');
-const tabRecentBtn = page.querySelector('.header__btn_recent');
-const tabInteresting = page.querySelector('.header__btn_int');
-const tabMain = page.querySelector('.header__btn_main');
-const cardsInvisibility = 'cards_display_none';
+import {
+  initialContainer,
+  initialContainerRecent,
+  initialContainerInt,
+  tabRecentBtn,
+  tabInteresting,
+  tabMain,
+  cardsInvisibility,
+} from '../components/constants';
 
 function createCard(title, price, image) {
   const data = {
@@ -42,32 +43,20 @@ interestingCard.forEach((item) => {
   initialContainerInt.append(card);
 });
 
-function showTab( containerVis, containerHidden, containerHid) {
+function showTab(containerVis, containerHidden, containerHid) {
   containerVis.classList.remove(cardsInvisibility);
   containerHidden.classList.add(cardsInvisibility);
   containerHid.classList.add(cardsInvisibility);
 }
 
 tabRecentBtn.addEventListener('click', () => {
-  showTab(
-    initialContainerRecent,
-    initialContainer,
-    initialContainerInt
-  );
+  showTab(initialContainerRecent, initialContainer, initialContainerInt);
 });
 
 tabInteresting.addEventListener('click', () => {
-  showTab(
-    initialContainerInt,
-    initialContainer,
-    initialContainerRecent
-  );
+  showTab(initialContainerInt, initialContainer, initialContainerRecent);
 });
 
 tabMain.addEventListener('click', () => {
-  showTab(
-    initialContainer,
-    initialContainerInt,
-    initialContainerRecent
-  );
+  showTab(initialContainer, initialContainerInt, initialContainerRecent);
 });
