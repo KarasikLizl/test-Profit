@@ -14,25 +14,25 @@ export const initialCards = [
   {
     title: 'Умные часы SMARTWATCH XM 109 черный',
     price: '12 999 ₽',
-    image: 'https://raw.githubusercontent.com/KarasikLizl/test-Profit/65bdfe86f9e988dc2e788d6e64485c6fad5b3b88/src/images/pic2.png?token=GHSAT0AAAAAAB3EIKQHKAGUDQD2BJHRGUPAY7H677A',
+    image: 'https://raw.githubusercontent.com/KarasikLizl/test-Profit/main/src/images/pic2.png?token=GHSAT0AAAAAAB3EIKQGD6J4SKFNBZSCXPTQY7IAXNA',
     counter: 0,
   },
   {
     title: 'Золотое кольцо МАЛИКА с аметистом и фианитами',
     price: '15 700 ₽',
-    image: 'https://raw.githubusercontent.com/KarasikLizl/test-Profit/65bdfe86f9e988dc2e788d6e64485c6fad5b3b88/src/images/pic3.png?token=GHSAT0AAAAAAB3EIKQHBMDHPYUHIFSLQMOSY7H7BHA',
+    image: 'https://raw.githubusercontent.com/KarasikLizl/test-Profit/main/src/images/pic3.png?token=GHSAT0AAAAAAB3EIKQHPDAQ2Z2G6AE5XNF4Y7IAXVQ',
     counter: 0,
   },
   {
     title: 'Золотое кольцо МАЛИКА с аметистом и фианитами',
     price: '15 700 ₽',
-    image: 'https://raw.githubusercontent.com/KarasikLizl/test-Profit/65bdfe86f9e988dc2e788d6e64485c6fad5b3b88/src/images/pic3.png?token=GHSAT0AAAAAAB3EIKQHBMDHPYUHIFSLQMOSY7H7BHA',
+    image: 'https://raw.githubusercontent.com/KarasikLizl/test-Profit/main/src/images/pic3.png?token=GHSAT0AAAAAAB3EIKQHPDAQ2Z2G6AE5XNF4Y7IAXVQ',
     counter: 0,
   },
   {
     title: 'Золотое кольцо МАЛИКА с аметистом и фианитами',
     price: '15 700 ₽',
-    image: 'https://raw.githubusercontent.com/KarasikLizl/test-Profit/65bdfe86f9e988dc2e788d6e64485c6fad5b3b88/src/images/pic3.png?token=GHSAT0AAAAAAB3EIKQHBMDHPYUHIFSLQMOSY7H7BHA',
+    image: 'https://raw.githubusercontent.com/KarasikLizl/test-Profit/main/src/images/pic3.png?token=GHSAT0AAAAAAB3EIKQHPDAQ2Z2G6AE5XNF4Y7IAXVQ',
     counter: 0,
   },
 ];

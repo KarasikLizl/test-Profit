@@ -17,9 +17,10 @@ export default class Card {
     this._cardImage = this._element.querySelector('.card__image');
     this._cardPrice = this._element.querySelector('.card__price');
     this._cardBuyBtn = this._element.querySelector('.card__basket');
+    this._cardBuyBtnText = this._element.querySelector('.card__basket-name');
     this._cardPlusBtn = this._element.querySelector('.card__count-btn_plus');
     this._cardMinusBtn = this._element.querySelector('.card__count-btn_minus');
-    // this._cardCounter = this._element.querySelector('card__count-btn__num').textContent;
+    this._cardCounter = this._element.querySelector('.card__count-btn__num');
   }
 
   generateCard() {
@@ -33,10 +34,30 @@ export default class Card {
   }
 
   _setEventListeres() {
+    // let count = this._cardCounter.textContent;
     this._cardLikeBtn.addEventListener('click', () => this._handleCardLike());
+
     this._cardCompareBtn.addEventListener('click', () =>
       this._handleCardCompare()
     );
+
+    this._cardBuyBtn.addEventListener('click', () => {
+      this._cardCounter.textContent = 1;
+      this._cardBuyBtnText.textContent = 'Добавлено';
+    });
+
+    this._cardPlusBtn.addEventListener('click', () => {
+      let count = this._cardCounter.textContent;
+      count++;
+      this._cardCounter.textContent = count;
+    });
+
+    this._cardMinusBtn.addEventListener('click', () => {
+      let count = this._cardCounter.textContent;
+      if (count > 0)
+      {count--;
+      this._cardCounter.textContent = count;}
+    });
   }
 
   _handleCardLike() {
@@ -45,11 +66,5 @@ export default class Card {
 
   _handleCardCompare() {
     this._cardCompareBtn.classList.toggle('card__btn_type_compare-active');
-  }
-  _counter() {
-    var currentCount = 0;
-    return function() {
-      return currentCount++;
-    };
   }
 }
