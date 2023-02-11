@@ -44,10 +44,12 @@ export default class Card {
   }
 
   _handleCardCompare() {
-    this._cardLikeBtn.classList.toggle('card__btn_type_compare-active');
+    this._cardCompareBtn.classList.toggle('card__btn_type_compare-active');
   }
-
-  // _handleBuyItem() {
-  //   this._cardCounter + 1;
-  // }
+  _counter() {
+    var currentCount = 0;
+    return function() {
+      return currentCount++;
+    };
+  }
 }

@@ -8,7 +8,7 @@ export const initialCards = [
   {
     title: 'Кашпо для цветов керамическое СИМПЛГРЕЙ',
     price: '450 ₽',
-    image: 'https://raw.githubusercontent.com/KarasikLizl/test-Profit/2e7a61b11da36506eb583dfd44d0f137a22cb634/src/images/pic1.png?token=GHSAT0AAAAAAB3EIKQHLCZEVYCNRYND7U3QY7H7AKQ',
+    image: 'https://raw.githubusercontent.com/KarasikLizl/test-Profit/main/src/images/pic1.png?token=GHSAT0AAAAAAB3EIKQHM5JQJDJNBMKCX5BKY7IATMQ',
     counter: 0,
   },
   {
