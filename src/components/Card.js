@@ -26,6 +26,7 @@ export default class Card {
     this._cardTitle.textContent = this._title;
     this._cardPrice.textContent = this._price;
     this._cardImage.src = this._image;
+    this._cardImage.alt = this._title;
     this._setEventListeres();
 
     return this._element;
