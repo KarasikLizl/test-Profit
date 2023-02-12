@@ -86,7 +86,7 @@ export const recentCard = [
     image: 'https://sun9-7.userapi.com/impg/117l4p7NuVbXAw2Bgyym57fa2PSOxEI1B4i8Uw/j2w5mMI3los.jpg?size=334x334&quality=96&sign=c445f868b169d5a13a9b340b0fd36ed4&type=album',
     counter: 0,
   },
-]
+];
 
 export const interestingCard = [
   {
@@ -101,5 +101,4 @@ export const interestingCard = [
     image: 'https://sun9-7.userapi.com/impg/117l4p7NuVbXAw2Bgyym57fa2PSOxEI1B4i8Uw/j2w5mMI3los.jpg?size=334x334&quality=96&sign=c445f868b169d5a13a9b340b0fd36ed4&type=album',
     counter: 0,
   },
-]
-
+];
