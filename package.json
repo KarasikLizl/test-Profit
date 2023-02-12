@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Elizaveta Kruchinina",
   "license": "ISC",
@@ -22,6 +23,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-react": "^7.32.1",
+    "gh-pages": "^5.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
