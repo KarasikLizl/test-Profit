@@ -1,5 +1,6 @@
 @import '../../utils/variables.scss';
 $grey-color: #535658;
+$transition: opacity .2s ease-in;
 
 .header {
   margin: 80px auto 0 auto;
@@ -16,6 +17,7 @@ $grey-color: #535658;
   }
 
   &__btn {
+    opacity: 1;
     margin-right: 25px;
     padding: 0;
     border: none;
@@ -33,6 +35,11 @@ $grey-color: #535658;
     background-size: 4px 1px;
     background-repeat: repeat-x;
     background-position: bottom;
+    transition: $transition;
+  }
+
+  &__btn:hover {
+    opacity: .7;
   }
 
   &__btn_no-border {
