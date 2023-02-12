@@ -9,5 +9,42 @@
   font-size: $main-font-size;
   line-height: $main-font-line-h;
   margin: 0 auto;
- padding: 0 160px; 
+  padding: 0 180px; 
 }
+
+@media (max-width: 1810px) {
+  .page {
+    width: 1048px;
+  }    
+}
+
+@media (max-width: $screen-xxl) {
+  .page {
+    width: 830px;
+    padding: 0 90px; 
+  }    
+}
+
+@media (max-width: $screen-xl) {
+  .page {
+    width: 560px;
+    padding: 0 90px; 
+  }    
+}
+
+@media (max-width: $screen-md) {
+  .page {
+    width: 262px;
+    padding: 0 50px; 
+  }    
+}
+
+@media (max-width: $screen-sm) and (min-width: $screen-xs) {
+  .page {
+    width: 300px;
+    padding-left: 20px;
+    padding-right: 0;
+    margin: 0;
+  }    
+}
+

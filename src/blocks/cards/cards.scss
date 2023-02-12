@@ -1,9 +1,14 @@
+@import '../../utils/variables.scss';
 $c-width: 334px;
 $c-height: 334px;
+$c-width-xs: 260px;
+$c-height-xs: 260px;
+
 $block-height: 496px;
+$block-height-xs: 441px;
 $round-btn-size: 34px;
 $border: #ecf0f4;
-$transition: background-color .2s ease-in;
+$transition: background-color 0.2s ease-in;
 %border {
   border: 1px solid $border;
   border-radius: 5px;
@@ -18,19 +23,31 @@ $transition: background-color .2s ease-in;
 }
 
 %transition-hover {
-  background-color: rgba($color: #000000, $alpha: .2);
+  background-color: rgba($color: #000000, $alpha: 0.2);
 }
 
 .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  overflow: hidden ;
+  overflow: hidden;
   padding-left: 0;
   margin: 0;
   list-style: none;
   position: relative;
-  transition: margin-left .3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+@media (max-width: 1810px) {
+  .cards {
+    width: 1048px;
+  }
+}
+
+@media (max-width: $screen-xxl) {
+  .cards {
+    width: 830px;
+  }
 }
 
 .cards__slider {
@@ -52,11 +69,11 @@ $transition: background-color .2s ease-in;
   background-color: #fff;
   background-image: url('../../images/vector-left.png');
   background-position: center;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
 }
 
 .cards__slider-btn:hover {
-  @extend %transition-hover; 
+  @extend %transition-hover;
 }
 
 .cards__slider-btn_right {
@@ -65,7 +82,7 @@ $transition: background-color .2s ease-in;
 }
 
 .card {
-  @extend %border;  
+  @extend %border;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -95,7 +112,7 @@ $transition: background-color .2s ease-in;
   }
 
   &__btn:hover {
-    @extend %transition-hover; 
+    @extend %transition-hover;
   }
 
   &__btn_type_like {
@@ -104,7 +121,7 @@ $transition: background-color .2s ease-in;
   }
 
   &__btn_type_like-active {
-    background-color: rgba($color: #000000, $alpha: .4);
+    background-color: rgba($color: #000000, $alpha: 0.4);
   }
 
   &__btn_type_compare {
@@ -113,7 +130,7 @@ $transition: background-color .2s ease-in;
   }
 
   &__btn_type_compare-active {
-    background-color: rgba($color: #000000, $alpha: .5);
+    background-color: rgba($color: #000000, $alpha: 0.5);
   }
 
   &__caption {
@@ -203,4 +220,55 @@ $transition: background-color .2s ease-in;
 
 .card:last-child {
   margin-right: 0;
+}
+
+@media (max-width: $screen-xxl) {
+
+  .cards__slider-btn {
+    left: -56px;
+  }
+
+  .cards__slider-btn_right {
+    left: calc(100% + 16px);
+  }
+
+  .card {
+    width: $c-width-xs;
+    height: $block-height-xs;
+
+    &__btn {
+      left: 213px;
+    }
+
+    &__image {
+      width: $c-width-xs;
+      height: $c-height-xs;
+    }
+
+    &__basket {
+      width: 220px;      
+      margin: 0 auto;
+    }
+
+    &__count-container {
+      display: none;
+    }
+
+    &__caption{
+      max-width: 220px;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) and (min-width: $screen-xs) {
+  .cards__slider-btn {
+    display: none;
+  } 
 }
