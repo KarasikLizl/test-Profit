@@ -12,4 +12,4 @@
 Есть возможность проверить проект на ошибки линтера командой 'npm run lint'.
 
 **Github pages**
-
+https://karasiklizl.github.io/test-Profit/
