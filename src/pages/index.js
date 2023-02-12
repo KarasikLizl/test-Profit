@@ -1,3 +1,5 @@
+/* eslint-disable prefer-const */
+/* eslint-disable prefer-template */
 import '../vendor/normalize.css';
 import './index.scss';
 import Card from '../components/Card.js';
@@ -17,20 +19,22 @@ import {
   slider,
   leftArrow,
   rightArrow,
+  stickerHit,
+  stickerNew,
 } from '../components/constants.js';
 
 // Слайдер
 function createSlider(element) {
-  const cardWidth = 356;
-  const elements = 1;
+  let cardWidth = 356;
+  let elements = 1;
   let cardPosition = 0;
-  const cardList = slider.querySelector(element);
-  const cardItems = cardList.querySelectorAll('.card');
+  let cardList = slider.querySelector(element);
+  let cardItems = cardList.querySelectorAll('.card');
 
   leftArrow.addEventListener('click', () => {
     cardPosition += cardWidth * elements;
     cardPosition = Math.min(cardPosition, 0);
-    cardList.style.marginLeft = `${cardPosition} px`;
+    cardList.style.marginLeft = cardPosition + 'px';
   });
 
   rightArrow.addEventListener('click', () => {
@@ -39,7 +43,7 @@ function createSlider(element) {
       cardPosition,
       -cardWidth * (cardItems.length - elements),
     );
-    cardList.style.marginLeft = `${cardPosition} px`;
+    cardList.style.marginLeft = cardPosition + 'px';
   });
 }
 
@@ -96,3 +100,14 @@ tabInteresting.addEventListener('click', () => {
   showTab(initialContainer, initialContainerRecent);
   createSlider('.cards__interesting');
 });
+
+function printSticker(item, url) {
+  const list = document.querySelectorAll('.card');
+  const child = list[item].firstElementChild;
+  child.classList.add('card__sticker_active');
+  child.src = url;
+}
+
+printSticker(2, stickerHit);
+printSticker(3, stickerNew);
+printSticker(5, stickerNew);

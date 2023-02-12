@@ -35,7 +35,7 @@ $transition: background-color 0.2s ease-in;
   margin: 0;
   list-style: none;
   position: relative;
-  transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.5s ease-in-out;
 }
 
 @media (max-width: 1810px) {
@@ -95,7 +95,7 @@ $transition: background-color 0.2s ease-in;
     width: $c-width;
     height: $c-height;
     background-image: url('../../images/bg-default.png');
-    display: block;
+    background-position: center
   }
 
   &__btn {
@@ -127,6 +127,21 @@ $transition: background-color 0.2s ease-in;
   &__btn_type_compare {
     background-image: url('../../images/compare.png');
     top: 59px;
+  }
+
+  &__sticker {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+  }
+
+  &__sticker_active {
+    display: block;
   }
 
   &__btn_type_compare-active {

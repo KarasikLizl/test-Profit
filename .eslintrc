@@ -22,7 +22,7 @@
    },
     "rules": {
       "linebreak-style": 0,
-      "no-underscore-dangle": ["error", { "allow": ["_id", "__dirname"] }],
+      "no-underscore-dangle": ["error", { "allow": ["_", "__dirname"] }],
       "import/no-unresolved": "off",
       "import/extensions": ["error", "ignorePackages"]
     }
