@@ -58,6 +58,9 @@ export default class Card {
       if (count > 0) {
         count--;
         this._cardCounter.textContent = count;
+        if (count === 0) {
+          this._cardBuyBtnText.textContent = 'В корзину';
+        }
       }
     });
   }
