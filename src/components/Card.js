@@ -18,6 +18,7 @@ export default class Card {
     this._cardTitle = this._element.querySelector('.card__title');
     this._cardImage = this._element.querySelector('.card__image');
     this._cardPrice = this._element.querySelector('.card__price');
+    this._cardOldPrice = this._element.querySelector('.card__price_old');
     this._cardBuyBtn = this._element.querySelector('.card__basket');
     this._cardBuyBtnText = this._element.querySelector('.card__basket-name');
     this._cardPlusBtn = this._element.querySelector('.card__count-btn_plus');
@@ -28,6 +29,7 @@ export default class Card {
   generateCard() {
     this._cardTitle.textContent = this._title;
     this._cardPrice.textContent = `${this._price} ₽`;
+    this._cardOldPrice.textContent = ' ₽';
     this._cardImage.src = this._image;
     this._cardImage.alt = this._title;
     this._setEventListeres();

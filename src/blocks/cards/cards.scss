@@ -175,6 +175,26 @@ $transition: background-color 0.2s ease-in;
     margin: 0;
   }
 
+  &__price-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  &__price_old {
+    margin: 0 0 0 10px;
+    text-decoration: line-through;
+    color: #8D9295;
+    font-size: 14px;
+    line-height: 22px;
+    font-size: 400;
+  }
+
+  &__price_old_hidden {
+    display: none;
+  }
+
   &__main-btns {
     align-self: center;
     display: flex;

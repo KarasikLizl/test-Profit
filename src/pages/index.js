@@ -108,3 +108,15 @@ function printSticker(item, url) {
 printSticker(2, stickerHit);
 printSticker(3, stickerNew);
 printSticker(5, stickerNew);
+
+function printSale(item, newPriceLabel) {
+  const list = document.querySelectorAll('.card');
+  const oldPrice = list[item].querySelector('.card__price_old');
+  const newPrice = list[item].querySelector('.card__price');
+  oldPrice.classList.remove('card__price_old_hidden');
+  oldPrice.textContent = newPrice.textContent;
+  newPrice.textContent = newPriceLabel + ' ₽';
+}
+
+printSale(1, 200);
+printSale(0, 500);
