@@ -21,6 +21,7 @@ import {
   rightArrow,
   stickerHit,
   stickerNew,
+  cardsInvisibility,
 } from '../components/constants.js';
 
 // Слайдер
@@ -59,9 +60,10 @@ function createCard(title, price, image) {
 }
 
 // Функция переключения между табами
-function showTab(containerHidden, containerHid) {
-  containerHidden.replaceChildren();
-  containerHid.replaceChildren();
+function showTab(containerVis, containerHidden, containerHid) {
+  containerVis.classList.remove(cardsInvisibility);
+  containerHidden.classList.add(cardsInvisibility);
+  containerHid.classList.add(cardsInvisibility);
 }
 
 // Генерация карточек на вкладке "популярные товары"
@@ -70,34 +72,29 @@ initialCards.forEach((item) => {
   initialContainer.append(card);
   createSlider('.cards__main');
 });
+// Генерация карточек на вкладке "недавно купили"
+recentCard.forEach((item) => {
+  const card = createCard(item.title, item.price, item.image);
+  initialContainerRecent.append(card);
+});
+// Генерация карточек на вкладке "вас может заинтересовать"
+interestingCard.forEach((item) => {
+  const card = createCard(item.title, item.price, item.image);
+  initialContainerInt.append(card);
+});
 
 tabMain.addEventListener('click', () => {
-  initialCards.forEach((item) => {
-    const card = createCard(item.title, item.price, item.image);
-    initialContainer.append(card);
-    createSlider('.cards__main');
-  });
-  showTab(initialContainerInt, initialContainerRecent);
+  showTab(initialContainer, initialContainerInt, initialContainerRecent);
 });
 
 // Слушатели переключения между табами
 tabRecentBtn.addEventListener('click', () => {
-  // Генерация карточек на вкладке "недавно купили"
-  recentCard.forEach((item) => {
-    const card = createCard(item.title, item.price, item.image);
-    initialContainerRecent.append(card);
-  });
-  showTab(initialContainer, initialContainerInt);
+  showTab(initialContainerRecent, initialContainer, initialContainerInt);
   createSlider('.cards__recent');
 });
 
 tabInteresting.addEventListener('click', () => {
-  // Генерация карточек на вкладке "вас может заинтересовать"
-  interestingCard.forEach((item) => {
-    const card = createCard(item.title, item.price, item.image);
-    initialContainerInt.append(card);
-  });
-  showTab(initialContainer, initialContainerRecent);
+  showTab(initialContainerInt, initialContainer, initialContainerRecent);
   createSlider('.cards__interesting');
 });
 

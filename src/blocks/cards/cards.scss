@@ -38,6 +38,10 @@ $transition: background-color 0.2s ease-in;
   transition: margin-left 0.5s ease-in-out;
 }
 
+.cards_display_none {
+  display: none;
+}
+
 @media (max-width: 1810px) {
   .cards {
     width: 1048px;

@@ -6,6 +6,7 @@ export const initialContainerInt = page.querySelector('.cards__interesting');
 export const tabRecentBtn = page.querySelector('.header__btn_recent');
 export const tabInteresting = page.querySelector('.header__btn_int');
 export const tabMain = page.querySelector('.header__btn_main');
+export const cardsInvisibility = 'cards_display_none';
 // Для слайдера
 export const slider = document.getElementById('slider');
 export const leftArrow = slider.querySelector('.cards__slider-btn_left');
