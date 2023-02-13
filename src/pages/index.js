@@ -26,19 +26,31 @@ import {
 
 // Слайдер
 function createSlider(element) {
-  let cardWidth = 356;
+  let cardWidth;
+  function resize() {
+    if (document.documentElement.clientWidth > 1440) {
+      cardWidth = 356;
+    } else {
+      cardWidth = 280;
+    } return cardWidth;
+  }
+
+  window.onresize = resize();
+
   let elements = 1;
   let cardPosition = 0;
   let cardList = slider.querySelector(element);
   let cardItems = cardList.querySelectorAll('.card');
 
   leftArrow.addEventListener('click', () => {
+    window.onresize = resize();
     cardPosition += cardWidth * elements;
     cardPosition = Math.min(cardPosition, 0);
     cardList.style.marginLeft = cardPosition + 'px';
   });
 
   rightArrow.addEventListener('click', () => {
+    window.onresize = resize();
     cardPosition -= cardWidth * elements;
     cardPosition = Math.max(
       cardPosition,
@@ -97,7 +109,7 @@ tabInteresting.addEventListener('click', () => {
   showTab(initialContainerInt, initialContainer, initialContainerRecent);
   createSlider('.cards__interesting');
 });
-
+// Функция для добавления стикеров на карточку товара
 function printSticker(item, url) {
   const list = document.querySelectorAll('.card');
   const child = list[item].firstElementChild;
@@ -108,7 +120,7 @@ function printSticker(item, url) {
 printSticker(2, stickerHit);
 printSticker(3, stickerNew);
 printSticker(5, stickerNew);
-
+// Функция добавления сновой цены
 function printSale(item, newPriceLabel) {
   const list = document.querySelectorAll('.card');
   const oldPrice = list[item].querySelector('.card__price_old');
